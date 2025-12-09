@@ -53,7 +53,7 @@ app.use((req, res) => {
 // start server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-    console.log(`Server running in $`)
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
 
 process.on('unhandledRejection', (err) => {
